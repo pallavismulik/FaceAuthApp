@@ -53,7 +53,6 @@ It is suitable for real-world fraud prevention scenarios without relying on paid
 |   ├── Webcam.js
 ├── appsettings.json
 ├── Program.cs
-├── Create_FaceAuthDb.sql (Database Script)
 └── README.md
 
 
@@ -63,7 +62,7 @@ It is suitable for real-world fraud prevention scenarios without relying on paid
 
 1. **Clone the Repository**
    
-   git clone https://github.com/pallavismulik/FaceAuthApp.git
+   git clone <repo-name>
    
 2. Restore NuGet Packages
 
