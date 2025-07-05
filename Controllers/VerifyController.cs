@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using FaceAuthApp.Data;
+﻿using FaceAuthApp.Data;
+using FaceAuthApp.Models;
 using FaceAuthApp.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace FaceAuthApp.Controllers
@@ -23,10 +24,17 @@ namespace FaceAuthApp.Controllers
         }
 
         [HttpPost("face")]
-        public async Task<IActionResult> VerifyFace([FromForm] IFormFile image)
+        //public async Task<IActionResult> VerifyFace([FromForm] IFormFile image)
+        public async Task<IActionResult> VerifyFace([FromForm] FaceVerificationRequest request)
         {
             try
             {
+                if (request == null) 
+                    return BadRequest("Invalid request");
+
+                //fetch the image from request input object
+                var image = request.Image;
+
                 if (image == null || image.Length == 0)
                     return BadRequest("Image is required.");
 
