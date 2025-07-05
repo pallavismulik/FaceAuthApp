@@ -34,6 +34,7 @@ It is suitable for real-world fraud prevention scenarios without relying on paid
 
 ## Project Structure
 
+```
 /FaceAuthApp/
 ├── Controllers/
 │ ├── UserController.cs
@@ -54,7 +55,7 @@ It is suitable for real-world fraud prevention scenarios without relying on paid
 ├── appsettings.json
 ├── Program.cs
 └── README.md
-
+```
 
 ---
 
